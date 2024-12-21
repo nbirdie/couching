@@ -19,6 +19,8 @@
   cursor: pointer;
   transition: all 0.2s;
   position: relative;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .button:hover {
