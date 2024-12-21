@@ -1,4 +1,6 @@
 import styles from './Sidebar.module.css';
+import cap from '/img/cap.webp';
+import tree from '/img/tree_full.webp';
 
 interface SidebarProps {
   sections: Record<
@@ -32,6 +34,7 @@ export default function Sidebar({
           {title}
         </button>
       ))}
+      <img src={tree} alt="cap" className={styles.cap} />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import styles from './BulletPoints.module.css';
+import cn from 'classnames';
 
 interface BulletPointsProps {
   title: string;
@@ -73,7 +74,10 @@ export default function BulletPoints({
           <button onClick={handleNext} className={styles.button}>
             <ChevronRight size={20} />
           </button>
-          <button onClick={handleShowAll} className={styles.button}>
+          <button
+            onClick={handleShowAll}
+            className={cn(styles.button, styles['christmas-button'])}
+          >
             Показать все
           </button>
         </div>

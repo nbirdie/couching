@@ -17,11 +17,12 @@ h3 {
 
 .controls {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.7rem;
 }
 
 .point:last-of-type {
   background: rgb(85, 121, 232);
+  background: rgb(94, 166, 52);
   padding: 1.5rem;
   border-radius: 0.5rem;
   color: white;
@@ -40,6 +41,37 @@ h3 {
 .button:hover {
   background: #f7fafc;
   transform: translateY(-1px);
+}
+
+.christmas-button {
+  background-color: #b21d1c;
+
+  /* background-color: rgb(85, 121, 232); */
+  color: white;
+  padding: 10px 24px;
+  position: relative;
+  border-radius: 10px;
+  &:hover {
+    background-color: rgb(94, 166, 52);
+    color: white;
+  }
+  &::after {
+    --overflow-x: 4px;
+    --snow-image: url('https://assets.codepen.io/4175254/snow-cap-test-2.png');
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: calc(var(--overflow-x) * -1);
+    border-image-source: var(--snow-image);
+    border-image-slice: calc(6 * 56 / 20) fill;
+    border-image-width: calc(28px / 3);
+    border-image-repeat: round;
+    width: calc(100% + var(--overflow-x) * 2);
+    height: 28px;
+    filter: drop-shadow(0 2px 1px rgb(0 0 0 / 0.25));
+    opacity: 1;
+    /* animation: fade-in 2s; */
+  }
 }
 
 .points {
