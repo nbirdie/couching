@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: calc(100vh - 4rem);
+}
+
+.content {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  margin-left: 16px;
+  margin-right: 16px;
+}
